@@ -23,6 +23,12 @@ docker cloud는 docker hub 위에서 docker 생태계에 좀 더 포괄적인 �
 - https://cloudc.docker.com 접속 후 로그인 > account setting
 ![cloud_docker_source_provider](/docker_auto_build_cloud_docker/images/cloud_docker_source_provider.png)
 
--  cloud docker에 create repository를 한 후 해당 repository에 build탭 > configuation auto builds
-![cloud_docker_source_provider](/docker_auto_build_cloud_docker/images/cloud_docker_build_config_1.png)
+-  cloud docker에 create repository를 한 후 해당 repository에 build탭 > configuation auto builds > 원하는 repository를 세팅합니다.
+![cloud_docker_build_config_1](/docker_auto_build_cloud_docker/images/cloud_docker_build_config_1.png)
 
+- Build Rule을 설정한다.
+build context 설정을 통해 dockerfile을 위치를 명시 할 수 있습니다.
+![cloud_docker_build_config_2](/docker_auto_build_cloud_docker/images/cloud_docker_build_config_2.png)
+  * Build context는 repository의 root path를 나타낸다. 즉 build시 config관련 파일이나 README 파일은 build context의 경로 기준으로 찾고 만약 파일이 없다면 default인 '/' path에서 찾게 된다.
+  * Build rule로는 tag 및 branch로 설정 할 수 있고 example에 있듯이 regular expression을 통해 tag, branch를 지정 할 수 있다.
+  * Docker tag경우는 auto build 됬을 시 docker image tag를 나타낸다.
