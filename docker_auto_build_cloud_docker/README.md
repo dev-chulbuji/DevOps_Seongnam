@@ -20,5 +20,9 @@ docker cloud는 docker hub 위에서 docker 생태계에 좀 더 포괄적인 �
 
 우선 docker cloud에 source provider로 github 저장소를 설정합니다.
 
-> https://cloudc.docker.com 접속 후 로그인 > account setting
-![cloud_docker_source_provider](/docker_auto_build-cloud_docker/images/cloud_docker_source_provider.png)
+- https://cloudc.docker.com 접속 후 로그인 > account setting
+![cloud_docker_source_provider](/docker_auto_build_cloud_docker/images/cloud_docker_source_provider.png)
+
+-  cloud docker에 create repository를 한 후 해당 repository에 build탭 > configuation auto builds
+![cloud_docker_source_provider](/docker_auto_build_cloud_docker/images/cloud_docker_build_config_1.png)
+
