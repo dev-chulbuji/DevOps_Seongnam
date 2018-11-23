@@ -1,0 +1,22 @@
+## docker in docker
+docker in docker 를 사용하게 되는 이유
+
+---
+
+작성한 dockerfile을 다운로드 한이후 다운로드 받은 경로에서 진행한다. 별도의 경로에서 진행할 경우에는 모든 경로는 기재한다.
+```
+docker build --tag moon-dockerfile:1.0 .
+docker images
+```
+![dockerfile-images](/docker_paas/images/dockerfile-images.png)
+```
+docker run -it -p 8080:80 --name=moon moon-dockerfile:1.0
+```
+별도의 터미널 창을 열어서 container 상태 확인.
+```
+docker ps -a
+```
+![docker-ct-ps](/docker_paas/images/docker-ct-ps.png)
+![dockerfile-apache-ch](/docker_paas/images/dockerfile-apache-ch.png)
+
+* dockerfile 의 경우에는 linux 에서 사용되는 자체 명령어로도 구성이 가능하기 때문에 많은 활용성과 소스로의 관리에 대한 편의성과 무결성 등을 모두 만족하는 것 같다.
