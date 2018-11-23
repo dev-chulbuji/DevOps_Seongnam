@@ -8,6 +8,7 @@ docker hub를 이용한 기본적으로 공유되고 있는 container 이미지�
 ### docker  
 - [docker wiki](https://en.wikipedia.org/wiki/Docker_(software)) 
 - [docker-docs install](https://docs.docker.com/docker-for-mac/install/)
+- [docker-docs Dockerfile](https://docs.docker.com/engine/reference/builder/#usage)
 ### docker hub  
 - [Overview of Docker Hub](https://docs.docker.com/docker-hub/)
 ---
@@ -71,6 +72,14 @@ docker run -it -p 8080:80 --name=moon moontaekwon/ubuntu-docker-images:1.0
 service apache2 start
 ```
 ![ubuntu-apache2](/docker_paas/images/ubuntu-apache2.png)
+
+---
+위의 방법들은 좋기는 하지만, 소스자체로의 관리에 대한 이점을 가지고 있지는 못합니다, 이러한 부분을 해결해주는 것이 바로 dockerfile 이라고 불리고 있는 도커 이미지 생성용 배치 파일 입니다.
+* 아래의 설명에서는 간단한 dockerfile 작성을 통한 docker container 이미지 생성 방법을 기재 합니다.
+
+```
+
+```
 
 
 * 18.11.20 - 18.11.23
