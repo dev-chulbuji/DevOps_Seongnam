@@ -1,12 +1,11 @@
 ## docker in docker
-docker container 이미지 에서 docker container 이미지를 생성하고 운영 할수 있을까?
+docker container 이미지 에서 docker를 설치하여 container 이미지를 생성하고 운영 할수 있을까?
 
 ---
 ### dind 
 - [dind-github](https://github.com/jpetazzo/dind)
 ---
-
-container 이미지를 다운받은 이후에 container 이미지 에서 docker install 이후 docker container 이미지를 생성 한 이후 dockerhub 로 업로드 하기 까지의 과정을 수동으로 테스트 해보았습니다.
+container 이미지 안에서 docker 설치 및 container 이미지를 생성하여 dockerhub 업로드 하기 까지의 과정을 수동으로 테스트 해보았습니다.
 - [Dockerfile source](https://github.com/jpetazzo/dind/blob/master/Dockerfile)
 ```
 docker build -t dind .
