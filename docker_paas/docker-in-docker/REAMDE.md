@@ -1,22 +1,34 @@
 ## docker in docker
-docker in docker 를 사용하게 되는 이유
+docker container 이미지 에서 docker container 이미지를 생성하고 운영 할수 있을까?
 
 ---
+### dind 
+- [dind-github](https://github.com/jpetazzo/dind)
+---
 
-작성한 dockerfile을 다운로드 한이후 다운로드 받은 경로에서 진행한다. 별도의 경로에서 진행할 경우에는 모든 경로는 기재한다.
+container 이미지를 다운받은 이후에 container 이미지 에서 docker install 이후 docker container 이미지를 생성 한 이후 dockerhub 로 업로드 하기 까지의 과정을 수동으로 테스트 해보았습니다.
+- [Dockerfile source](https://github.com/jpetazzo/dind/blob/master/Dockerfile)
 ```
-docker build --tag moon-dockerfile:1.0 .
-docker images
+docker build -t dind .
+docker run --privileged -t -i dind
 ```
-![dockerfile-images](/docker_paas/images/dockerfile-images.png)
+docker continer console
 ```
-docker run -it -p 8080:80 --name=moon moon-dockerfile:1.0
+docker -v & docker images & docker ps -a # docker 동작 유무 확인.
+docker pull ubuntu
+docker run -it --name=moon ubuntu
 ```
-별도의 터미널 창을 열어서 container 상태 확인.
+dind continer console
 ```
-docker ps -a
+cat /etc/*release
+exit
 ```
-![docker-ct-ps](/docker_paas/images/docker-ct-ps.png)
-![dockerfile-apache-ch](/docker_paas/images/dockerfile-apache-ch.png)
+docker continer console
+```
+docker commit moon moontaekwon/dind:1.0
+docker push moontaekwon/dind:1.0
+```
+![dind-push](/docker_paas/images/dind-push.png)
+* 위의 continer 이미지를 이용한 jenkins 추가 설치 및 설정등을 dockerfile 로 재구성하여, jenkins를 이용한 자동배포등 구성해 보면 좋을것 같다.
 
-* dockerfile 의 경우에는 linux 에서 사용되는 자체 명령어로도 구성이 가능하기 때문에 많은 활용성과 소스로의 관리에 대한 편의성과 무결성 등을 모두 만족하는 것 같다.
+별도의 centos/ubuntu를 이용한 dockerinstall 이후 진행하려 헀으나, systemctl등의 이슈로 인하여 조금더 자세하게 확인을 해봐야겠다.
