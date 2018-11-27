@@ -1,4 +1,4 @@
-## docker in docker
+## docker in docker (DinD)
 docker container 이미지 에서 docker를 설치하여 container 이미지를 생성하고 운영 할수 있을까?
 
 ---
