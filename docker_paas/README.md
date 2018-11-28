@@ -76,6 +76,6 @@ service apache2 start
 ---
 위의 방법들은 좋기는 하지만, 소스자체로의 관리에 대한 이점을 가지고 있지는 못합니다, 이러한 부분을 해결해주는 것이 바로 dockerfile 이라고 불리고 있는 도커 이미지 생성용 배치 파일 입니다. 해당 부분은 아래의 일정에 맞게 아래의 링크로 업데이트 하였습니다.
 * 18.11.20 - 18.11.23
-    * [docker paas (11.21)](https://github.com/dev-chulbuji/DevOps_Seongnam/blob/master/docker_paas/REAMDE.md)
-    * [docker file (11.23)](https://github.com/dev-chulbuji/DevOps_Seongnam/blob/master/docker_paas/dockerfile/REAMDE.md)
-    * [docker in docker (11.23)](https://github.com/dev-chulbuji/DevOps_Seongnam/blob/master/docker_paas/docker-in-docker/REAMDE.md)
+    * [docker paas (11.21)](https://github.com/dev-chulbuji/DevOps_Seongnam/blob/master/docker_paas/README.md)
+    * [docker file (11.23)](https://github.com/dev-chulbuji/DevOps_Seongnam/blob/master/docker_paas/dockerfile/README.md)
+    * [docker in docker (11.23)](https://github.com/dev-chulbuji/DevOps_Seongnam/blob/master/docker_paas/docker-in-docker/README.md)
