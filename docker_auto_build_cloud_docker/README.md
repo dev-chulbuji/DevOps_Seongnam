@@ -20,7 +20,7 @@ docker cloud는 docker hub 위에서 docker 생태계에 좀 더 포괄적인 �
 # 1. docker cloud setting
 우선 docker cloud에 source provider로 github 저장소를 설정합니다.
 
-- https://cloudc.docker.com 접속 후 로그인 > account setting
+- https://cloud.docker.com 접속 후 로그인 > account setting
 ![cloud_docker_source_provider](/docker_auto_build_cloud_docker/images/cloud_docker_source_provider.png)
 
 -  cloud docker에 create repository를 한 후 해당 repository에 build탭 > configuation auto builds > 원하는 repository를 세팅합니다.
@@ -72,7 +72,7 @@ git push
 
 build가 완성되면 docker가 설치되어 있는 환경에서 테스트를 해본다.
 ```
-docker run -dit --name auto-build-test {{cloude docker username / repositoryname}}
+docker run -dit --name auto-build-test {{cloud docker username / repositoryname}}
 
 // ex: docker run -dit --name auto-build-test ladmusiciankim/auto_build_test
 
