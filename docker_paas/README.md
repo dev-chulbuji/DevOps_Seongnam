@@ -35,7 +35,7 @@ docker search ubuntu
 docker run -it -p 8080:80 --name=ubuntu_test ubuntu
 ```
 ![run](/docker_paas/images/docker-run-it.png)
-dockerhub 를 이용한 container 이미지의 내용을 회사표준 및 공동개발을 진행하는 개발자들에게 공유하기위한 표준 container 이미지를 작성한다.
+dockerhub 를 이용한 container 이미지의 내용을 회사표준 및 공동개발을 진행하는 개발자들에게 공유하기위한 표준 container 이미지를 작성합니다.
 ```
 apt-get update
 apt-get install apache2
@@ -47,7 +47,7 @@ vi index.html
 
 ![ubuntu-apache2](/docker_paas/images/ubuntu-apache2.png)
 
-위의 작업 이후에 container 에서 작업을 종료하고 (container 콘솔 안에서 exit 명령어를 통한 종료), container 에서 작업한 내용을 아래의 절차에 따라 저장 및 공유한다.
+위의 작업 이후에 container 에서 작업을 종료하고 (container 콘솔 안에서 exit 명령어를 통한 종료), container 에서 작업한 내용을 아래의 절차에 따라 저장 및 공유합니다.
 
 ```
 docker commit ubuntu_test moontaekwon/ubuntu-docker-images:1.0
@@ -58,7 +58,7 @@ docker images
 docker push moontaekwon/ubuntu-docker-images:1.0
 ```
 ![docker-push](/docker_paas/images/docker-push.png)
-위의 작업으로 dockerhub 로 업로드 되었으며, 해당 제작한 이미지를 가지고 어디서든 pull(다운로드) 받아서 사용이 가능하다.
+위의 작업으로 dockerhub 로 업로드 되었으며, 해당 제작한 이미지를 가지고 어디서든 pull(다운로드) 받아서 사용이 가능합니다.
 ![dockerhub-moon](/docker_paas/images/dockerhub-moon.png)
 ```
 docker pull moontaekwon/ubuntu-docker-images:1.0
@@ -74,7 +74,7 @@ service apache2 start
 ![ubuntu-apache2](/docker_paas/images/ubuntu-apache2.png)
 
 ---
-위의 방법들은 좋기는 하지만, 소스자체로의 관리에 대한 이점을 가지고 있지는 못합니다, 이러한 부분을 해결해주는 것이 바로 dockerfile 이라고 불리고 있는 도커 이미지 생성용 배치 파일 입니다. 해당 부분은 아래의 일정에 맞게 아래의 링크로 업데이트 하였습니다.
+위의 방법들 또한 유용하지만 소스코드 자체로의 관리에 대한 이점을 가지고 있지는 못합니다, 이러한 부분을 해결해주는 것이 바로 dockerfile 이라고 불리고 있는 도커 이미지 생성용 배치 파일 입니다, 해당 부분은 아래의 링크로 업데이트 하였습니다.
 * 18.11.20 - 18.11.23
     * [docker paas (11.21)](https://github.com/dev-chulbuji/DevOps_Seongnam/blob/master/docker_paas/README.md)
     * [docker file (11.23)](https://github.com/dev-chulbuji/DevOps_Seongnam/blob/master/docker_paas/dockerfile/README.md)
