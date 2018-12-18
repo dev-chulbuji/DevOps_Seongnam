@@ -3,7 +3,7 @@
 
 ---
 
-- [Dockerfile source](/dockerfile/Dockerfile)
+- [Dockerfile source](https://github.com/dev-chulbuji/DevOps_Seongnam/blob/master/docker_paas/dockerfile/Dockerfile)
 
 작성한 dockerfile을 다운로드 한이후 다운로드 받은 경로에서 진행합니다, 별도의 경로에서 진행할 경우에는 모든 경로는 기재 하도록 합니다.
 ```
