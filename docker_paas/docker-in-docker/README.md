@@ -4,6 +4,9 @@ docker container 이미지 에서 docker를 설치하여 container 이미지를 
 ---
 ### dind 
 - [dind-github](https://github.com/jpetazzo/dind)
+
+![dind-main-image](/docker_paas/images/dockerindocker-main.png)
+
 ---
 container 이미지 안에서 docker 설치 및 container 이미지를 생성하여 dockerhub 업로드 까지의 과정을 수동으로 테스트 해보았습니다.
 - [Dockerfile source](https://github.com/jpetazzo/dind/blob/master/Dockerfile)

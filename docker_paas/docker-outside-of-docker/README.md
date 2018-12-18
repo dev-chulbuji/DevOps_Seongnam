@@ -1,5 +1,8 @@
 ## Docker outside of Docker (DooD)
 DinD의 아래 문제점을 해결 하기위해 DooD를 확인해 보았습니다, DooD는 호스트의 Docker 소켓을 게스트로 마운트하여 게스트 continer 에서 호스트에서의 docker install 환경을 이용하는 것으로 DinD와는 다른 형태의 테스트 입니다.
+
+![dood-main-images](/docker_paas/images/dockeroutsidedocker-main.png)
+
 * docker in docker (dind)의 가장큰 문제점은 보안 측면에서의 호스트의 권한의 많은 부분을 사용할수 있는도록 하는 privileged 옵션을 부여해야 하는 부분에 입니다.
 * --privileged 옵션 설명
   * Give extended privileges to this container
